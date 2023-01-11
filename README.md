@@ -54,7 +54,7 @@ OPENAI_API_KEY = 'your-API'
 - Save the changes
 
 
-*Note: If you use a public GitHub-repo, make sure to add `key.py` to gitgnore*
+*Note: If you use a public GitHub-repo, make sure to add `key.py` to gitgnore. Review [this information about API safety]( https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)*
 
 
 ### Text generation with GPT3
