@@ -1,36 +1,29 @@
-# OpenAI 
+# OpenAI API  
 
 
-## OpenAI API 
+### Anaconda environment
 
 
-
-
-
-## Setup
-
-### Virtual Anaconda environment
-
-Create a new environment in Anaconda:
-
+- Create a new environment in Anaconda:
 
 ```bash
 conda create -n openai python=3.10 pip  
 ```
 
-To activate the environment, use
+- To activate the environment, use:
 
 ```bash
 conda activate openai
 ```
 
-Install the `openai` Python module into the environment:
+- Use pip to install the `openai` Python module into the environment:
+
 
 ```bash
 pip install openai
 ```
 
-This package provides the IPython kernel for Jupyter:
+- This package provides the IPython kernel for Jupyter:
 
 
 ```bash
@@ -38,29 +31,48 @@ pip install ipykernel
 ```
 
 
-### OpenAI key
+### API key
 
-Create a python file called `key.py`. The file only contains the following line:
+
+- In your code editor, create a new file with the name `key.py` (save it as `.py` file, not `.ipynb`) and insert this line:
+
 
 ```bash
-OPENAI_API_KEY = 'insertyourkey'
+OPENAI_API_KEY = 'foo'
 ```
-If you use GitHub, make sure to add the file `key.py` to gitgnore.
+
+- Now go to your OpenAI account and navigate to "[View API keys](https://beta.openai.com/account/api-keys)"
+
+- Select "Create new secret key"
+
+- Copy the key and insert it into your file `key.py` (replace `foo` with your API):
+
+```bash
+OPENAI_API_KEY = 'your-API'
+```
+
+- Save the changes
 
 
-## Text generation with GPT3
+*Note: If you use a public GitHub-repo, make sure to add `key.py` to gitgnore*
 
-Turn a product description into ad copy: `copy-text.ipynb`
 
-Important model parameters:
+### Text generation with GPT3
+
+Let's turn a product description into ad copy.
+
+Open the file `copy-text.ipynb`.
+
+
+In the file, you could change the following model parameters:
 
 - `model`: The OpenAI API is powered by a [family of models](https://beta.openai.com/docs/models/gpt-3) with different capabilities and [price points](https://openai.com/api/pricing/). While *Davinci* is generally the most capable, the other models can perform certain tasks extremely well with significant speed or cost advantages. For example, *Curie* can perform many of the same tasks as Davinci, but faster and for 1/10th the cost.
 
-- `prompt`: some user input.
+- `prompt`: some user text input (a description of the task the model should perform).
 
-- `temperature`: What sampling temperature to use. Higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 (argmax sampling) for ones with a well-defined answer.
+- `temperature`: What sampling temperature to use. Higher values means the model will take more risks (this means it will generate more creative output). Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.
 
-- `max_tokens` (maximum length) - Does not control the length of the output, but a hard cutoff limit for token generation. Ideally you won’t hit this limit often, as your model will stop either when it thinks it’s finished, or when it hits a stop sequence you defined.
+- `max_tokens` (maximum length) - Does not control the length of the output, but a hard cutoff limit for token generation. 
 
 
 ## Image creation with DALL-E2
