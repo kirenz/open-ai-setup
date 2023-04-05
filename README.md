@@ -57,6 +57,9 @@ OPENAI_API_KEY = 'your-API'
 *Note: If you use a public GitHub-repo, make sure to add `key.py` to gitgnore. Review [this information about API safety]( https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)*
 
 
+
+---
+
 ### Text generation with GPT3
 
 Let's turn a product description into ad copy.
@@ -74,6 +77,7 @@ In the file, you could change the following model parameters:
 
 - `max_tokens` (maximum length) - Does not control the length of the output, but a hard cutoff limit for token generation. 
 
+---
 
 ## Image creation with DALL-E2
 
