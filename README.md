@@ -4,7 +4,7 @@
 ### Anaconda environment
 
 
-- Create a new environment in Anaconda:
+- Create a new environment in Anaconda (with Python 3.10 and [pip](https://pypi.org/project/pip/)):
 
 ```bash
 conda create -n openai python=3.10 pip  
